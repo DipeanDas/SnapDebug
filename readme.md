@@ -1,7 +1,7 @@
 # 🐞 SnapDebug  
-### Your Code's Fastest Path to Clarity 
-
----
+<p align="center">
+Your Code's Fastest Path to Clarity 
+</p>
 
 ## 🚀 Overview  
 SnapDebug is a lightweight AI-powered debugging tool that helps you quickly understand and fix coding errors.  
@@ -9,7 +9,7 @@ Just upload a screenshot of an error or paste your code, and get structured debu
 
 No setup. No digging through forums. Just answers with clarity.
 
----
+
 
 ## ✨ Features  
 
@@ -43,6 +43,13 @@ No setup. No digging through forums. Just answers with clarity.
 3. AI analyzes the error
 4. Structured response is generated
 5. Results are displayed in clean sections[Error,Cause,Fix,Solution Code]
+
+## 🖥️ Link to WebApp
+👉 [SnapDebug](https://snapdebug.streamlit.app/)
+
+## 📸 WebApp Snapshot
+<img width="1366" height="646" alt="snapdebug" src="https://github.com/user-attachments/assets/0f7e1c2e-3037-4b8a-9269-0ae2d9a07961" />
+
 
 ## 🔮 Future Improvements
 1. OCR fallback for better screenshot parsing
