@@ -1,19 +1,34 @@
-def build_prompt(mode):
+def build_prompt(language, mode):
 
-    base_prompt = """
-    You are an expert programming debugger.
-    Analyze the uploaded image (code error or stack trace).
-    """
+    lang_line = "" if language == "Auto" else f"Language: {language}\n"
 
-    if mode == "Hints":
-        return base_prompt + """
-        Give only hints and guidance.
-        Do NOT provide full code solution.
-        """
+    base = f"""
+You are a programming debugger.
 
-    elif mode == "Solution with code":
-        return base_prompt + """
-        Explain the error clearly and provide corrected code.
-        """
+{lang_line}
+Analyze input (image or text).
 
-    return base_prompt
+Respond in this exact format:
+
+### Error
+(one line)
+
+### Cause
+(short reason)
+
+### Fix
+(clear steps)
+
+"""
+
+    if mode == "Solution":
+        base += """
+### Code
+(corrected code only if needed)
+"""
+    else:
+        base += """
+Do not include full code.
+"""
+
+    return base.strip()
